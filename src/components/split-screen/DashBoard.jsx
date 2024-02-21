@@ -11,7 +11,10 @@ const Container = styled.div`
 const DashBoard = () => {
   return (
     <Container>
-      <SplitScreen Left={<Sidebar />} Right={<Main />} />
+      <SplitScreen leftWidth={1} rightWidth={3}>
+        <Sidebar title='Menu' />
+        <Main title='Main Content' />
+      </SplitScreen>
     </Container>
   );
 };
