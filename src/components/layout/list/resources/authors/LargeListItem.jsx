@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { books } from '../books/books';
-import { UnorderedList } from '../../UnorderedList';
 import { SmallBookListItem } from '../books/SmallListItem';
+import List from '../../List';
 
 export const LargeAuthorListItem = ({ author }) => {
   const { name, surname, age, country, id } = author;
@@ -16,7 +16,7 @@ export const LargeAuthorListItem = ({ author }) => {
       <p>Country: {country}</p>
       <div>
         <h4>Books:</h4>
-        <UnorderedList
+        <List
           items={collection}
           resourceName='book'
           ItemComponent={SmallBookListItem}

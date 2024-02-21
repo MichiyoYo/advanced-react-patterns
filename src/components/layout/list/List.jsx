@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const List = ({ ListType, items, resourceName, ItemComponent }) => {
+const List = ({ ListType = 'ul', items, resourceName, ItemComponent }) => {
   return (
     <ListType>
       {items?.map((item, i) => (
