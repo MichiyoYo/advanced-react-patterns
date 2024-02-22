@@ -33,14 +33,7 @@ const CloseIcon = styled.div`
   cursor: pointer;
 `;
 
-const ActionBtns = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-`;
-
-export const Modal = ({ children, onSave }) => {
+export const Modal = ({ children }) => {
   const [show, setShow] = useState(false);
 
   const dismiss = () => {
@@ -63,10 +56,6 @@ export const Modal = ({ children, onSave }) => {
           >
             <CloseIcon onClick={dismiss}>&times;</CloseIcon>
             {children}
-            <ActionBtns>
-              <button onClick={onSave}>Save</button>
-              <button onClick={dismiss}>Cancel</button>
-            </ActionBtns>
           </ModalContent>
         </ModalBackdrop>
       )}
